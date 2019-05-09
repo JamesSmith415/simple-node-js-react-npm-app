@@ -11,7 +11,10 @@ pipeline {
         }
         stage('Test') { 
             steps {
-                bash './jenkins/scripts/test.sh' 
+                bat 'npm install --save-dev cross-env' 
+            }
+            steps {
+                bat 'npm test' 
             }
         }
     }
