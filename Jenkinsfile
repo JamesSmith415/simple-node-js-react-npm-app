@@ -6,12 +6,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'npm install'
+                bash 'npm install'
             }
         }
         stage('Test') { 
             steps {
-                bat './jenkins/scripts/test.sh' 
+                bash './jenkins/scripts/test.sh' 
             }
         }
     }
